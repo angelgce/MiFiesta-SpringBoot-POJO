@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+
+	<div id="contenedor">
+		<header th:text="${titulo}"></header>
+		<table>
+			<thead>
+				<tr>
+					<td>Nombre</td>
+					<td>Apellido</td>
+					<td>Correo</td>
+					<td>Telefono</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="objeto: ${lista.items} ">
+					<td th:text="${objeto.nombre}"></td>
+					<td th:text="${objeto.apellido}"></td>
+					<td th:text="${objeto.correo}"></td>
+					<td th:text="${objeto.numero_telefonico}"></td>
+				</tr>
+
+
+			</tbody>
+
+
+		</table>
+	</div>
+	<footer> &copy;AngelGCE</footer>
+
+
+
+
+</body>
+</html>
